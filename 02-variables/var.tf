@@ -47,3 +47,8 @@ variable "sample5" {
 output "sample4" {
   value = var.sample4[0]
 }
+
+# Access a MAP value
+output "sample5" {
+  value = var.sample4["number"]
+}
