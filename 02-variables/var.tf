@@ -7,6 +7,37 @@ output "sample" {
   value = var.sample
 }
 
-output "sample2" {
+output "sample1" {
   value = "hey, ${var.sample}"
+}
+
+#no. data type dont need ""
+variable "sample2" {
+  default = 100
+}
+
+#boolean data type dont need ""
+variable "sample3" {
+  default = true
+}
+
+# List Variable
+
+variable "sample4" {
+  default = [
+  "hello",
+    100,
+    true
+
+  ]
+}
+
+# Map Variable
+
+variable "sample5" {
+  default = {
+    string = "hello"
+    number = 100
+    boolean = true
+  }
 }
