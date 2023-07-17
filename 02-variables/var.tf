@@ -58,3 +58,10 @@ variable "sample6" {}
 output "sample6" {
   value = var.sample6
 }
+
+## Pick a variable from CLI
+variable "sample7" {
+  output "sample7" {
+    value = var.sample7
+  }
+}
