@@ -50,5 +50,5 @@ output "sample4" {
 
 # Access a MAP value
 output "sample5" {
-  value = var.sample4["number"]
+  value = var.sample5["number"]
 }
