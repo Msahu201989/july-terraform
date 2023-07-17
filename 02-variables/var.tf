@@ -41,3 +41,9 @@ variable "sample5" {
     boolean = true
   }
 }
+
+# Access a list value
+
+output "sample4" {
+  value = "var.sample4"
+}
