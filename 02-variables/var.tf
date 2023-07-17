@@ -55,3 +55,6 @@ output "sample5" {
 
 # Pick a variable from terraform.tfvars file
 variable "sample6" {}
+output "sample6" {
+  value = var.sample6
+}
