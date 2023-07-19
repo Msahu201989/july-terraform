@@ -1,10 +1,10 @@
-resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
+resource "aws_security_group" "allow_sssh" {
+  name        = "allow_sssh"
   description = "Allow TLS inbound traffic"
   vpc_id      = "vpc-0aa9e93d9aea8a408"
 
   ingress {
-    description      = "Allow ssh"
+    description      = "allow sssh"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
@@ -21,6 +21,6 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "allow_sssh"
   }
 }
