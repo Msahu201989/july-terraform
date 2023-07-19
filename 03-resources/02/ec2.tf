@@ -5,9 +5,8 @@ provider "aws" {
 resource "aws_instance" "sample" {
   ami = "ami-0bb6af715826253bf"
   instance_type = "t3.micro"
-  ebs_block_device {
+  root_block_device {
     volume_size = "15"
-    device_name = "/dev/sda1"
   }
 }
 
