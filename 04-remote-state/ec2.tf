@@ -4,8 +4,7 @@ resource "aws_instance" "sample" {
   vpc_security_group_ids = [aws_security_group.allow_sssh.id]
 
   tags = {
-    Name = upper(var.tagName)
+    Name = Hello
   }
 }
 
-variable "tagName" {}
