@@ -1,9 +1,9 @@
 resource "aws_instance" "sample" {
-  count = length(var.instances)
+  for_each = var.instances
   ami = "ami-0bb6af715826253bf"
-  instance_type = element(var.instances, count.index)
+  instance_type = each.instance_type
   tags = {
-    Name = element(var.instances, count.index )
+    Name = each.tagName
   }
 }
 
@@ -22,6 +22,6 @@ variable "instances" {
   }
 }
 
-output "count" {
-  value = length(var.instances)
-}
+#output "count" {
+#  value = length(var.instances)
+#}
