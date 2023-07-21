@@ -1,16 +1,27 @@
-resource "aws_instance" "sample" {
-  count = length(var.instances)
-  ami = "ami-0bb6af715826253bf"
-  instance_type = "t3.micro"
-  tags = {
-    Name = element(var.instances, count.index )
+#resource "aws_instance" "sample" {
+#  count = length(var.instances)
+#  ami = "ami-0bb6af715826253bf"
+#  instance_type = "t3.micro"
+#  tags = {
+#    Name = element(var.instances, count.index )
+#  }
+#}
+
+
+variable "instances" {
+  default = {
+    catalogue = {
+      instance_type = "t3.micro"
+      tagName = "CATALOGUE"
+      }
+    cart = {
+      instance_type = "t3.micro"
+      tagName = "CART"
+    }
+
   }
 }
 
-output "public_ip" {
-  value = aws_instance.sample.*.public_ip
-}
-
-variable "instances" {
-  default = ["cart", "catalogue"]
+output "count" {
+  value = length(var.instances)
 }
