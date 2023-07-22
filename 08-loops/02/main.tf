@@ -14,7 +14,7 @@ variable "instances" {
       instance_type = "t3.micro"
       tagName = "CATALOGUE"
       }
-    cart = {
+    Dart = {
       instance_type = "t3.micro"
       tagName = "CART"
     }
